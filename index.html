@@ -125,7 +125,7 @@ strong{font-weight:500}
 .hero__media{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#0e1c2e}
 .hero__poster,.hero__poster img,.hero__video{position:absolute;inset:0;width:100%;height:100%}
 .hero__poster img,.hero__video{object-fit:cover;object-position:50% 58%}
-.hero__video{opacity:0;transition:opacity 1.2s ease}
+.hero__video{opacity:0;transition:opacity .7s ease}
 .hero__video.is-playing{opacity:1}
 .hero__kb{position:absolute;inset:0;transform-origin:50% 60%}
 .hero__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,32,.66) 0%,rgba(11,20,32,.16) 30%,rgba(11,20,32,0) 48%,rgba(11,20,32,.14) 66%,rgba(11,20,32,.9) 100%);pointer-events:none}
@@ -453,7 +453,7 @@ strong{font-weight:500}
       <use href="#mark" x="68" y="68" width="64" height="64"/>
     </svg>
   </div>
-  <button class="video-toggle fade d3" type="button" aria-pressed="false" aria-label="Pause background video" data-video-toggle>
+  <button class="video-toggle fade d3" type="button" aria-pressed="false" aria-label="Pause video" data-video-toggle>
     <svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
     <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg>
     <span data-video-label>Pause video</span>
@@ -693,7 +693,7 @@ strong{font-weight:500}
       userPaused = !userPaused;
       if (userPaused) { video.pause(); } else { tryPlay(); }
       vt.setAttribute('aria-pressed', userPaused);
-      vl.textContent = userPaused ? 'Play video' : 'Pause video'; vt.setAttribute('aria-label', userPaused ? 'Play background video' : 'Pause background video');
+      vl.textContent = userPaused ? 'Play video' : 'Pause video'; vt.setAttribute('aria-label', userPaused ? 'Play video' : 'Pause video');
     });
     // save battery: pause when the hero is off screen
     new IntersectionObserver(([e]) => { if (userPaused) return; e.isIntersecting ? tryPlay() : video.pause(); }, { threshold: 0.05 }).observe(video);
