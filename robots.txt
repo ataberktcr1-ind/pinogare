@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ataberktcr1-ind.github.io/pinogare/sitemap.xml
