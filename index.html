@@ -130,7 +130,8 @@ strong{font-weight:500}
 .hero__kb{position:absolute;inset:0;transform-origin:50% 60%}
 .hero__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,32,.66) 0%,rgba(11,20,32,.16) 30%,rgba(11,20,32,0) 48%,rgba(11,20,32,.14) 66%,rgba(11,20,32,.9) 100%);pointer-events:none}
 .hero__content{position:relative;z-index:1;display:grid;justify-items:center;text-align:center;align-content:start;gap:1.2rem;padding:clamp(6.5rem,17vh,10rem) var(--gutter) 0}
-.hero .eyebrow{font-size:.62rem;letter-spacing:.24em}
+.hero .eyebrow{font-size:.62rem;letter-spacing:.2em}
+@media (max-width:40em){.hero .eyebrow::before,.hero .eyebrow::after{display:none}}
 @media (min-width:40em){.hero .eyebrow{font-size:.72rem;letter-spacing:.3em}}
 .hero__title{font:500 clamp(5rem,23vw,9rem)/.9 var(--display);letter-spacing:-.025em;text-shadow:0 2px 40px rgba(11,20,32,.35)}
 .hero__title .ln{display:block;overflow:hidden;padding:0 .08em .06em}
